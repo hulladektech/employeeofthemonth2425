@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Na3MK4y</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Ticket to Happiness :)</h2>
+    <form id="inputForm">
+        <input type="text" id="inputText" placeholder="Enter Code">
+        <input type="submit" value="Submit">
+    </form>
+    <div class="output" id="outputText"></div>
+</div>
+
+<script>
+document.getElementById('inputForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var input = document.getElementById('inputText').value;
+    var outputDiv = document.getElementById('outputText');
+    outputDiv.innerHTML = processInput(input);
+});
+
+// Function to process input based on condition
+function processInput(input) {
+    if (input === "SURPRISE20") {
+        return "<B> Keep calm and enjoy the car ride.</B> Congratulations on winning Free Cab rides worth <B> <FONT COLOR= #2FB850> Rs.1700 </FONT> </B>. <BR><BR> Avail your Uber/Ola (any one) voucher today!";
+        } else {
+            return "<B> <FONT COLOR= #2FB850> Oops! </FONT> </B> Please try again with the right code";
+        }
+    }
+</script>
+
+</body>
+</html>
